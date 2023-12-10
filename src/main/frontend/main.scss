@@ -8,16 +8,14 @@
   --dark-theme-bg-medium-grey: #444;
   --dark-theme-bg-light-grey: #555;
   --dark-theme-bg-very-light-grey: #444;
-  --background: hsl(240, 6%, 13%);
+  --background: hsl(240, 15%, 5%);
   --very-light-grey: var(--dark-theme-bg-very-light-grey);
   --light-grey: var(--dark-theme-bg-medium);
   --medium-grey: var(--dark-theme-bg-medium-grey);
 
-  --accent-color: color(display-p3 0.43 0.757 1);
-
   /* Text */
-  --text-color: rgb(250, 250, 255);
-  --text-color-secondary: rgb(160, 160, 165);
+  --text-color: hsl(240, 100%, 98%);
+  --text-color-secondary: hsl(240, 10%, 60%);
   --call-to-action-text-color: var(--dark-theme-bg-medium);
   --call-to-action-link-color: var(--call-to-action-text-color);
 
@@ -52,18 +50,18 @@
   --header-link-bg-classic-hover: var(--text-color);
 
   /* Breadcrumbs */
-  --breadcrumbs-bar-background: hsl(240, 6%, 9%, 0.8);
+  --breadcrumbs-bar-background: hsla(240, 15%, 8%, 0.8);
 
   /* Tooltips */
   --tooltip-background: hsl(240, 6%, 23%);
-  --tooltip-backdrop-filter: contrast(0.6) saturate(4) brightness(0.4) blur(15px);
+  --tooltip-backdrop-filter: contrast(0.6) saturate(4.5) brightness(0.4) blur(15px);
   --tooltip-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
                         0 0 8px 2px rgba(0, 0, 30, 0.05),
                         0 0 1px 1px rgba(0, 0, 20, 0.025),
                         0 10px 20px rgba(0, 0, 20, 0.15);
 
   /* Dropdowns */
-  --dropdown-backdrop-filter: contrast(0.85) saturate(2) brightness(0.7) blur(20px);
+  --dropdown-backdrop-filter: contrast(0.85) saturate(2.5) brightness(0.7) blur(20px);
   --dropdown-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
                          0 0 8px 2px rgba(0, 0, 30, 0.05),
                          0 0 1px 1px rgba(0, 0, 20, 0.025),
@@ -90,7 +88,7 @@
                       0 10px 20px rgba(0, 0, 20, 0.3);
 
   /* Table */
-  --table-background: var(--dark-theme-bg-black);
+  //--table-background: var(--dark-theme-bg-black);
   --table-header-foreground: rgb(240, 240, 245);
   --table-body-background: var(--background);
   --table-body-foreground: rgb(240, 240, 245);
@@ -104,27 +102,26 @@
   --table-striped-bg--hover: var(--dark-theme-bg-dark-grey);
 
   /* Pane widget */
-  --pane-border-color: var(--dark-theme-bg-dark-grey);
+  //--pane-border-color: var(--dark-theme-bg-dark-grey);
   --pane-header-border-color: var(--dark-theme-bg-dark-grey);
-  --pane-header-color: var(--dark-theme-bg-black);
+  //--pane-header-color: var(--dark-theme-bg-black);
 
   /* Tab bar */
-  --tabs-background: var(--dark-theme-bg-black);
-  --tabs-item-background: transparent;
-  --tabs-item-background--hover: rgba(255, 255, 255, 0.05);
-  --tabs-item-background--active: rgba(255, 255, 255, 0.1);
-  --tabs-item-background--selected: rgba(255, 255, 255, 0.05);
+  //--tabs-background: var(--dark-theme-bg-black);
+  //--tabs-item-background: transparent;
+  //--tabs-item-background--hover: rgba(255, 255, 255, 0.05);
+  //--tabs-item-background--active: rgba(255, 255, 255, 0.1);
+  //--tabs-item-background--selected: rgba(255, 255, 255, 0.05);
 
   /* Side panel */
-  --panel-header-bg-color: var(--dark-theme-bg-black);
-  --panel-border-color: rgb(50, 50, 55);
-  --panel-border-color--hover: var(--dark-theme-bg-black);
+  //--panel-header-bg-color: var(--dark-theme-bg-black);
+  //--panel-border-color: rgb(50, 50, 55);
   --task-link-bg-color--hover: var(--dark-theme-bg-medium-grey);
 
   /* Form */
-  --input-color: hsl(240, 6%, 20%);
-  --input-border: hsl(240, 6%, 40%);
-  --input-border-hover: hsl(240, 6%, 50%);
+  --input-color: var(--layer-1);
+  --input-border: var(--layer-2);
+  --input-border-hover: var(--layer-3);
   --focus-input-border: var(--accent-color);
   --focus-input-glow: color-mix(in srgb, var(--focus-input-border) 20%, transparent);
   --pre-background: var(--dark-theme-bg-black);
@@ -162,6 +159,10 @@
 
   /* Auto complete */
   --auto-complete-bg-color--prehighlight: var(--accent-color);
+
+  --layer-1: hsla(240, 15%, 45%, 10%);
+  --layer-2:  hsla(240, 15%, 45%, 22%);
+  --layer-3: hsla(240, 15%, 45%, 34%);
 
   body {
     // Render native browser elements in dark mode
@@ -336,7 +337,7 @@
   }
 
   $colors: (
-    "blue": hsl(210, 100%, 55%),
+    "blue": hsl(210, 100%, 58%),
     "brown": hsl(30, 35%, 45%),
     "cyan": hsl(200, 100%, 70%),
     "green": hsl(135, 75%, 55%),
