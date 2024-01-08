@@ -47,7 +47,9 @@
   --header-bg-classic: #000;
   --search-bg: #4d545d;
   --search-input-color: rgb(200, 200, 204);
-  --header-link-bg-classic-hover: var(--text-color);
+  .main-search__icon-trailing {
+    --header-link-bg-classic-hover: var(--text-color);
+  }
 
   /* Breadcrumbs */
   --breadcrumbs-bar-background: hsla(240, 15%, 8%, 0.8);
@@ -163,6 +165,14 @@
   --layer-1: hsla(240, 15%, 45%, 10%);
   --layer-2:  hsla(240, 15%, 45%, 22%);
   --layer-3: hsla(240, 15%, 45%, 34%);
+
+  /* Card */
+  --card-background: hsla(240, 25%, 75%, 0.04);
+  --card-background--hover: hsla(240, 25%, 75%, 0.06);
+  --card-background--active: hsla(240, 25%, 75%, 0.08);
+  --card-border-color: hsla(240, 25%, 75%, 0.02);
+  --card-border-color--hover: var(--card-border-color);
+  --card-border-color--active: var(--card-border-color);
 
   body {
     // Render native browser elements in dark mode
