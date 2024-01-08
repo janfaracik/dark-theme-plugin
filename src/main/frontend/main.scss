@@ -1,7 +1,6 @@
 @use "sass:color";
 
 @mixin dark-mode {
-  --dark-theme-bg-black: hsl(240, 6%, 10%);
   --dark-theme-bg-dark: #222;
   --dark-theme-bg-medium: #2d2b2b;
   --dark-theme-bg-dark-grey: #333;
@@ -33,26 +32,19 @@
   --alert-danger-bg-color: #cc0000;
   --alert-danger-border-color: var(--alert-danger-bg-color);
 
-  /* Buttons */
-  --btn-primary-bg: #53c1ff;
-  --btn-secondary-bg: var(--dark-theme-bg-dark);
-  --btn-secondary-color: var(--btn-primary-color);
-  --btn-link-bg--hover: var(--dark-theme-bg-dark-grey);
-  --btn-link-bg--active: var(--dark-theme-bg-dark-grey);
-
   /* Header */
   --brand-link-color: var(--accent-color);
   --header-link-color: var(--text-color);
   --header-link-color-active: var(--text-color);
-  --header-bg-classic: #000;
   --search-bg: #4d545d;
   --search-input-color: rgb(200, 200, 204);
+
   .main-search__icon-trailing {
     --header-link-bg-classic-hover: var(--text-color);
   }
 
   /* Breadcrumbs */
-  --breadcrumbs-bar-background: hsla(240, 15%, 8%, 0.8);
+  --breadcrumbs-bar-background: transparent;
 
   /* Tooltips */
   --tooltip-background: hsl(240, 6%, 23%);
@@ -90,13 +82,12 @@
                       0 10px 20px rgba(0, 0, 20, 0.3);
 
   /* Table */
-  //--table-background: var(--dark-theme-bg-black);
+  --table-background: var(--layer-1);
   --table-header-foreground: rgb(240, 240, 245);
-  --table-body-background: var(--background);
   --table-body-foreground: rgb(240, 240, 245);
 
   /* Deprecated */
-  --bigtable-header-bg: var(--dark-theme-bg-black);
+  --bigtable-header-bg: var(--layer-1);
   --bigtable-header-border-color: var(--dark-theme-bg-dark-grey);
   --bigtable-header-text-color: var(--text-color);
   --bigtable-row-border-color: var(--dark-theme-bg-dark-grey);
@@ -104,20 +95,20 @@
   --table-striped-bg--hover: var(--dark-theme-bg-dark-grey);
 
   /* Pane widget */
-  //--pane-border-color: var(--dark-theme-bg-dark-grey);
+  --pane-border-color: var(--layer-1);
   --pane-header-border-color: var(--dark-theme-bg-dark-grey);
-  //--pane-header-color: var(--dark-theme-bg-black);
+  --pane-header-color: var(--layer-1);
 
   /* Tab bar */
-  //--tabs-background: var(--dark-theme-bg-black);
-  //--tabs-item-background: transparent;
-  //--tabs-item-background--hover: rgba(255, 255, 255, 0.05);
-  //--tabs-item-background--active: rgba(255, 255, 255, 0.1);
-  //--tabs-item-background--selected: rgba(255, 255, 255, 0.05);
+  --tabs-background: var(--layer-1);
+  --tabs-item-background: transparent;
+  --tabs-item-background--hover: rgba(255, 255, 255, 0.05);
+  --tabs-item-background--active: rgba(255, 255, 255, 0.1);
+  --tabs-item-background--selected: rgba(255, 255, 255, 0.05);
 
   /* Side panel */
-  //--panel-header-bg-color: var(--dark-theme-bg-black);
-  //--panel-border-color: rgb(50, 50, 55);
+  --panel-header-bg-color: var(--layer-1);
+  --panel-border-color: rgb(50, 50, 55);
   --task-link-bg-color--hover: var(--dark-theme-bg-medium-grey);
 
   /* Form */
@@ -126,7 +117,7 @@
   --input-border-hover: var(--layer-3);
   --focus-input-border: var(--accent-color);
   --focus-input-glow: color-mix(in srgb, var(--focus-input-border) 20%, transparent);
-  --pre-background: var(--dark-theme-bg-black);
+  --pre-background: var(--layer-1);
   --selection-color: color-mix(in srgb, var(--focus-input-border) 40%, transparent);
 
   --header-search-border: var(--dark-theme-bg-dark-grey);
@@ -153,7 +144,7 @@
   --plugin-manager-bg-color-already-upgraded: var(--dark-theme-bg-medium);
   --plugin-manager-category-link-bg-color: #5d5b5b;
   --plugin-manager-category-link-bg-color--hover: var(--dark-theme-bg-dark-grey);
-  --plugin-manager-category-link-border-color--hover: var(--dark-theme-bg-black);
+  --plugin-manager-category-link-border-color--hover: var(--layer-1);
   --plugin-manager-category-text-color: var(--text-color);
   --plugin-manager-category-link-color--hover: #a5a3a3;
   --plugin-manager-unavailable-bg-color: var(--dark-theme-bg-medium);
@@ -162,21 +153,36 @@
   /* Auto complete */
   --auto-complete-bg-color--prehighlight: var(--accent-color);
 
-  --layer-1: hsla(240, 15%, 45%, 10%);
-  --layer-2:  hsla(240, 15%, 45%, 22%);
+  --layer-1: hsla(240, 15%, 45%, 9%);
+  --layer-2: hsla(240, 15%, 45%, 22%);
   --layer-3: hsla(240, 15%, 45%, 34%);
 
+  // Default button
+  --button-background: var(--layer-1);
+  --button-background--hover: var(--layer-2);
+  --button-background--active: var(--layer-3);
+  --button-box-shadow--focus: hsla(240, 25%, 75%, 0.1);
+
+  // Variables for sidebar items, card items
+  --item-background--hover: var(--layer-2);
+  --item-background--active: var(--layer-3);
+  --item-box-shadow--focus: hsla(240, 25%, 75%, 0.105);
+
   /* Card */
-  --card-background: hsla(240, 25%, 75%, 0.04);
+  --card-background: var(--layer-1);
   --card-background--hover: hsla(240, 25%, 75%, 0.06);
   --card-background--active: hsla(240, 25%, 75%, 0.08);
-  --card-border-color: hsla(240, 25%, 75%, 0.02);
+  --card-border-color: hsla(240, 15%, 45%, 2.5%);
   --card-border-color--hover: var(--card-border-color);
   --card-border-color--active: var(--card-border-color);
 
   body {
     // Render native browser elements in dark mode
     color-scheme: dark;
+  }
+
+  .jenkins-table {
+    background-clip: content-box;
   }
 }
 
