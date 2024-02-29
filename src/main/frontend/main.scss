@@ -7,14 +7,14 @@
   --dark-theme-bg-medium-grey: #444;
   --dark-theme-bg-light-grey: #555;
   --dark-theme-bg-very-light-grey: #444;
-  --background: hsl(240, 15%, 5%);
+  --background: hsl(230, 15%, 5%);
   --very-light-grey: var(--dark-theme-bg-very-light-grey);
   --light-grey: var(--dark-theme-bg-medium);
   --medium-grey: var(--dark-theme-bg-medium-grey);
 
   /* Text */
-  --text-color: hsl(240, 100%, 98%);
-  --text-color-secondary: hsl(240, 10%, 60%);
+  --text-color: hsl(230, 15%, 90%);
+  --text-color-secondary: hsl(230, 15%, 55%);
   --call-to-action-text-color: var(--dark-theme-bg-medium);
   --call-to-action-link-color: var(--call-to-action-text-color);
 
@@ -44,10 +44,10 @@
   }
 
   /* Breadcrumbs */
-  --breadcrumbs-bar-background: transparent;
+  --breadcrumbs-bar-background: hsl(230, 10%, 23%, 10%);
 
   /* Tooltips */
-  --tooltip-background: hsl(240, 6%, 23%);
+  --tooltip-background: hsl(230, 6%, 23%);
   --tooltip-backdrop-filter: contrast(0.6) saturate(4.5) brightness(0.4) blur(15px);
   --tooltip-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
                         0 0 8px 2px rgba(0, 0, 30, 0.05),
@@ -63,7 +63,7 @@
 
   /* Dialogs */
   ::backdrop {
-    --dialog-backdrop-background: hsla(240, 6%, 3%, 0.9);
+    --dialog-backdrop-background: hsla(230, 6%, 3%, 0.9);
   }
   --dialog-backdrop-filter: contrast(0.85) saturate(2) brightness(0.7) blur(20px);
   --dialog-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
@@ -73,7 +73,7 @@
 
 /* Modals - for backwards compatibility only */
   ::backdrop {
-    --modal-backdrop-background: hsla(240, 6%, 3%, 0.9);
+    --modal-backdrop-background: hsla(230, 6%, 3%, 0.9);
   }
   --modal-backdrop-filter: contrast(0.85) saturate(2) brightness(0.7) blur(20px);
   --modal-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
@@ -83,7 +83,7 @@
 
   /* Table */
   --table-background: var(--layer-1);
-  --table-border-color: hsla(240, 25%, 75%, 0.02);
+  --table-border-color: hsla(230, 25%, 75%, 0.02);
 
   /* Deprecated */
   --bigtable-header-bg: var(--layer-1);
@@ -104,7 +104,7 @@
   --tabs-item-background--hover: rgba(255, 255, 255, 0.05);
   --tabs-item-background--active: rgba(255, 255, 255, 0.1);
   --tabs-item-background--selected: rgba(255, 255, 255, 0.05);
-  --tabs-border-color: hsla(240, 25%, 75%, 0.02);
+  --tabs-border-color: hsla(230, 25%, 75%, 0.02);
 
   /* Side panel */
   --panel-header-bg-color: var(--layer-1);
@@ -153,26 +153,26 @@
   /* Auto complete */
   --auto-complete-bg-color--prehighlight: var(--accent-color);
 
-  --layer-1: hsla(240, 15%, 45%, 9%);
-  --layer-2: hsla(240, 15%, 45%, 22%);
-  --layer-3: hsla(240, 15%, 45%, 34%);
+  --layer-1: hsl(230, 15%, 8%);
+  --layer-2: hsla(230, 15%, 45%, 22%);
+  --layer-3: hsla(230, 15%, 45%, 34%);
 
   // Default button
   --button-background: var(--layer-1);
   --button-background--hover: var(--layer-2);
   --button-background--active: var(--layer-3);
-  --button-box-shadow--focus: hsla(240, 25%, 75%, 0.1);
+  --button-box-shadow--focus: hsla(230, 25%, 75%, 0.1);
 
   // Variables for sidebar items, card items
   --item-background--hover: var(--layer-2);
   --item-background--active: var(--layer-3);
-  --item-box-shadow--focus: hsla(240, 25%, 75%, 0.105);
+  --item-box-shadow--focus: hsla(230, 25%, 75%, 0.105);
 
   /* Card */
   --card-background: var(--layer-1);
-  --card-background--hover: hsla(240, 25%, 75%, 0.06);
-  --card-background--active: hsla(240, 25%, 75%, 0.08);
-  --card-border-color: hsla(240, 15%, 45%, 2.5%);
+  --card-background--hover: hsla(230, 25%, 75%, 0.06);
+  --card-background--active: hsla(230, 25%, 75%, 0.08);
+  --card-border-color: hsla(230, 15%, 45%, 2.5%);
   --card-border-color--hover: var(--card-border-color);
   --card-border-color--active: var(--card-border-color);
 
@@ -353,7 +353,7 @@
   }
 
   $colors: (
-    "blue": hsl(210, 100%, 58%),
+    "blue": hsl(210, 95%, 58%),
     "brown": hsl(30, 35%, 45%),
     "cyan": hsl(200, 100%, 70%),
     "green": hsl(135, 75%, 55%),
@@ -362,9 +362,9 @@
     "pink": hsl(350, 100%, 60%),
     "purple": hsl(280, 85%, 60%),
     "red": hsl(5, 100%, 60%),
-    "yellow": hsl(50, 100%, 55%),
+    "yellow": hsl(45, 100%, 55%),
     "white": hsl(0, 0%, 100%),
-    "black": hsl(240, 22%, 10%),
+    "black": hsl(230, 22%, 10%),
   );
 
   @each $name, $value in $colors {
