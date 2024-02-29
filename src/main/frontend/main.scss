@@ -83,8 +83,7 @@
 
   /* Table */
   --table-background: var(--layer-1);
-  --table-header-foreground: rgb(240, 240, 245);
-  --table-body-foreground: rgb(240, 240, 245);
+  --table-border-color: hsla(240, 25%, 75%, 0.02);
 
   /* Deprecated */
   --bigtable-header-bg: var(--layer-1);
@@ -105,6 +104,7 @@
   --tabs-item-background--hover: rgba(255, 255, 255, 0.05);
   --tabs-item-background--active: rgba(255, 255, 255, 0.1);
   --tabs-item-background--selected: rgba(255, 255, 255, 0.05);
+  --tabs-border-color: hsla(240, 25%, 75%, 0.02);
 
   /* Side panel */
   --panel-header-bg-color: var(--layer-1);
