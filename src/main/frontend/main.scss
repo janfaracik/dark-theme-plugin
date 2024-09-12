@@ -1,7 +1,7 @@
 @use "sass:color";
 
 $hue: 230;
-$saturation: 15%;
+$saturation: 12.5%;
 
 @mixin dark-mode {
   --dark-theme-bg-black: hsl(240, 6%, 10%);
@@ -16,21 +16,21 @@ $saturation: 15%;
   --medium-grey: var(--dark-theme-bg-medium-grey);
 
   /* Primary */
-  --background: hsl(#{$hue} #{$saturation} 5.5%);
+  --background: hsl(#{$hue} #{$saturation} 5.25%);
   --text-color: hsl(#{$hue} #{$saturation} 85%);
-  --text-color-secondary: hsl(#{$hue} #{$saturation * 1.33} 60%);
+  --text-color-secondary: hsl(#{$hue} #{$saturation} 60%);
   --accent-color: var(--blue);
 
   /* Buttons */
-  --button-background: hsla(#{$hue} 25% 75% / 0.1);
-  --button-background--hover: hsla(#{$hue} 25% 75% / 0.175);
-  --button-background--active: hsla(#{$hue} 25% 75% / 0.25);
-  --button-box-shadow--focus: hsla(#{$hue} 25% 75% / 0.1);
+  --button-background: hsla(#{$hue} #{$saturation} 55% / 0.1);
+  --button-background--hover: hsla(#{$hue} #{$saturation} 55% / 0.175);
+  --button-background--active: hsla(#{$hue} #{$saturation} 55% / 0.25);
+  --button-box-shadow--focus: hsla(#{$hue} #{$saturation} 55% / 0.1);
 
   /* Items */
-  --item-background--hover: hsla(#{$hue} #{$saturation} 75% / 0.15);
-  --item-background--active: hsla(#{$hue} #{$saturation} 75% / 0.225);
-  --item-box-shadow--focus: hsla(#{$hue} #{$saturation} 75% / 0.105);
+  --item-background--hover: hsla(#{$hue} #{$saturation} 50% / 0.15);
+  --item-background--active: hsla(#{$hue} #{$saturation} 50% / 0.225);
+  --item-box-shadow--focus: hsla(#{$hue} #{$saturation} 50% / 0.105);
 
   /* Deprecated */
   --btn-primary-bg: #53c1ff;
@@ -51,7 +51,7 @@ $saturation: 15%;
   //}
 
   /* Breadcrumbs */
-  --breadcrumbs-bar-background: hsl(#{$hue} 6%, 9%, 0.8);
+  --breadcrumbs-bar-background: hsl(#{$hue} #{$saturation} 7% / 0.8);
 
   /* Command Palette */
   --command-palette-results-backdrop-filter: contrast(0.95) brightness(1.3) saturate(2) blur(30px);
@@ -81,9 +81,9 @@ $saturation: 15%;
                          0 10px 20px rgba(0, 0, 20, 0.3);
 
   /* Dialogs */
-  //::backdrop {
-  //  --dialog-backdrop-background: hsla(#{$hue} 6%, 3%, 0.9);
-  //}
+  ::backdrop {
+    --dialog-backdrop-background: hsla(#{$hue} 6%, 3%, 0.9);
+  }
   --dialog-backdrop-filter: contrast(0.85) saturate(2) brightness(0.7) blur(20px);
   --dialog-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
                       0 0 8px 2px rgba(0, 0, 30, 0.05),
@@ -91,9 +91,9 @@ $saturation: 15%;
                       0 10px 20px rgba(0, 0, 20, 0.3);
 
   /* Modals - for backwards compatibility only */
-  //::backdrop {
-  //  --modal-backdrop-background: hsla(#{$hue} 6%, 3%, 0.9);
-  //}
+  ::backdrop {
+    --modal-backdrop-background: hsla(#{$hue} 6%, 3%, 0.9);
+  }
   --modal-backdrop-filter: contrast(0.85) saturate(2) brightness(0.7) blur(20px);
   --modal-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
                       0 0 8px 2px rgba(0, 0, 30, 0.05),
@@ -178,10 +178,10 @@ $saturation: 15%;
   --auto-complete-bg-color--prehighlight: var(--accent-color);
 
   /* Card */
-  --card-background: hsl(#{$hue} 15% 10%);
-  --card-background--hover: hsl(#{$hue} 15% 16% / 22%);
-  --card-background--active: hsl(#{$hue} 15% 16% / 28%);
-  --card-border-color: hsla(#{$hue} 25% 75% / 0.02);
+  --card-background: hsl(#{$hue} #{$saturation} 8.5%);
+  --card-background--hover: hsl(#{$hue} #{$saturation} 16% / 22%);
+  --card-background--active: hsl(#{$hue} #{$saturation} 16% / 28%);
+  --card-border-color: hsla(#{$hue} #{$saturation} 10%);
   --card-border-color--hover: var(--card-border-color);
   --card-border-color--active: var(--card-border-color);
 
